@@ -1,31 +1,40 @@
 package day21_multidimensionalArrays;
 
+import java.util.Arrays;
+
 public class AnagramTask {
     public static void main(String[] args) {
 
-        String str1 = "heart";
-        String str2 = "eart";
-
-        char [] str3 = str1.toCharArray();
-        char [] str4 = str2.toCharArray();
-
-        for (int i = 0; i < str3.length; i++) {
-
-            int count = 0;
-            for (int j = 0; j < str4.length; j++) {
-                if(str3[i] == str4[j]){
-                    count++;
-
-                }
-            }if(count == 1){
-                System.out.println(true);
-            }else{
-                System.out.println(false);
-            }
+        String str1 = "heart";  // aehtr
+        String str2 = "eart";  // aehtr
 
 
+        String [] a1 = str1.split("");
+        String [] a2 = str2.split("");
 
-        }
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+
+
+        boolean isAnagram = Arrays.equals(a1, a2);
+        System.out.println(isAnagram);
+
+
 
     }
 }
+
+/*
+ Write a  function that check if a string is build out of the same letters as another string. (Anagram Task)
+
+            Ex: str1 = "heart"
+                str2 = "earth"
+
+            output:
+                true
+
+                str1 = "java"
+                str2 = "python"
+            output:
+                false
+ */
