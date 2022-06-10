@@ -31,6 +31,23 @@ public class MultidimensionalArrayPractice {
                 System.out.println(eachElement);
             }
         }
+        System.out.println("________________________________________________________");
+
+
+        for (int i = groups.length - 1; i >= 0; i--) {
+            String []eachGroup = groups[i];
+            System.out.println(Arrays.toString(eachGroup));
+            for(String eachStudent: eachGroup){
+                System.out.println(eachStudent);
+            }
+        }
+
+
+        System.out.println(groups);
+
+        System.out.println(Arrays.toString(groups)); // to String only for Single Dimensional Arrays
+
+        System.out.println(Arrays.deepToString(groups)); // deepToString ==> only for multidemensional Arrays
 
     }
 
