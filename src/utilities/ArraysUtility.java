@@ -159,8 +159,9 @@ public class ArraysUtility {
             if (each.equals(element)){
                 return true;
             }
-        }
-        return false;
+
+        } return false;
+
 
 
 
