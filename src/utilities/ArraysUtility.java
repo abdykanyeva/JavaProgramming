@@ -90,6 +90,85 @@ public class ArraysUtility {
 
     }
 
+    public static double [] addElements(double [] array, double element){
+
+        double [] newArray = Arrays.copyOf(array, array.length + 1);
+        newArray[newArray.length - 1] = element;
+        return newArray;
+
+    }
+
+    public static String [] addElements(String [] array, String element){
+
+        String [] newArray = Arrays.copyOf(array, array.length + 1);
+        newArray[newArray.length - 1] = element;
+        return newArray;
+
+    }
+
+    public static boolean contains(int[] array, int element){
+
+
+        for(int each:array){
+            if (each == element){
+                return true;
+            }
+        }
+        return false;
+
+
+
+
+    }
+
+    public static boolean contains(double[] array, double element){
+
+
+        for(double each:array){
+            if (each == element){
+                return true;
+            }
+        }
+        return false;
+
+
+
+
+    }
+    
+    
+    public static boolean contains(char[] array, char element){
+
+
+        for(char each:array){
+            if (each == element){
+                return true;
+            }
+        }
+        return false;
+
+
+
+
+    }
+
+    public static boolean contains(String[] array, String element){
+
+
+        for(String each:array){
+            if (each.equals(element)){
+                return true;
+            }
+        }
+        return false;
+
+
+
+
+    }
+
+
+
 
 
 
