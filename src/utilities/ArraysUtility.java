@@ -169,6 +169,80 @@ public class ArraysUtility {
     }
 
 
+    public static int [] replace (int[] array, int index, int newElement){
+        int [] newArray = new int[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            array[index] = newElement;
+            newArray[i] = array[i];
+
+        }
+        return newArray;
+
+
+
+
+
+    }
+
+
+
+    public static double [] replace (double[] array, int index, double newElement){
+        double [] newArray = new double[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            array[index] = newElement;
+            newArray[i] = array[i];
+
+        }
+        return newArray;
+
+
+
+
+
+    }
+
+
+
+    public static char [] replace (char[] array, int index, char newElement){
+        char [] newArray = new char[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            array[index] = newElement;
+            newArray[i] = array[i];
+
+        }
+        return newArray;
+
+
+
+
+
+    }
+
+
+
+    public static String [] replace (String[] array, int index, String newElement){
+        String [] newArray = new String[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            array[index] = newElement;
+            newArray[i] = array[i];
+
+        }
+        return newArray;
+
+
+
+
+
+    }
+
+
+
+
+
 
 
 
