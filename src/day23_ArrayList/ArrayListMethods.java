@@ -69,6 +69,12 @@ public class ArrayListMethods {
         System.out.println(names.lastIndexOf("Vasyl"));
 
         System.out.println(names.lastIndexOf("Sumeyee"));
+        
+        boolean hasMuhtar = names.contains("Muhtar");
+        boolean hasAli = names.contains("ALi");
+
+        System.out.println("hasMuhtar = " + hasMuhtar);
+        System.out.println("hasAli = " + hasAli);
 
 
 
