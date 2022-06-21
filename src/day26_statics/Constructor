@@ -1,0 +1,10 @@
+
+
+this. : to call instance variables and instance methods
+this() : used to call constructor in another constructor
+
+
+** Only a constructor can call another constructor by using this() keyword
+** Constructor call MUST BE at first step
+** One constructor can not call more than once
+** Constructor can not call or contain itself

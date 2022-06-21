@@ -12,9 +12,9 @@ public class Person {
     public boolean isMarried;
     public boolean isEmployed;
 
-    public Person(String name, int age, char gender, LocalDate dateOfBirth, boolean isMarried, boolean isEmployed){
+    public Person(String name, char gender, LocalDate dateOfBirth, boolean isMarried, boolean isEmployed){
         this.name = name;
-        this.age = age;
+        this.age = LocalDate.now().getYear() - dateOfBirth.getYear();
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
         this.isMarried = isMarried;
