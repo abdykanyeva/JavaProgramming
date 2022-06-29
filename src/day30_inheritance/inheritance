@@ -1,0 +1,21 @@
+
+
+OOP Inheritance:  to build IS A relationship between the classes(parent/child, super/sub))
+
+                   easiest way to get rich ====> extends
+
+                   Child class(sub): can inherit all the variables and methods that are aaccessible and visible from the parent class
+
+                   Parent class(super): can NOT inherit anything from child class. Constructor of parent class can never be inherited to the cchild class
+                                       contains all the common features(variables/methods) of all child classes
+
+                   Class A extends Class B
+
+
+                   Advantages:
+
+                   1. Avoid repitition, less code
+                   2. improves the reusability of our codes
+                   3. clean
+                   4. less memory usage
+                   5. easy to maintain
