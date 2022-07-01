@@ -2,7 +2,8 @@ package day30_inheritance.typesOfInheritence;
 
 
 import java.time.LocalDate;
-import java.time.LocalDate;
+
+import java.time.format.DateTimeFormatter;
 
 public class Person {
 
@@ -58,7 +59,7 @@ public class Person {
 
 
     public void eat(String food){
-        System.out.println(name + " is eating");
+        System.out.println(name + " is eating" + food);
     }
 
     public void drink(String drink){
@@ -71,7 +72,7 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
-                ", DOB=" + DOB +
+                ", DOB=" + DOB.format(DateTimeFormatter.ofPattern("mm-DD-y")) +
                 '}';
     }
 }
