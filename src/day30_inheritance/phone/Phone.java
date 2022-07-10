@@ -60,7 +60,7 @@ public class Phone {
 
     public void setColor(String color) {
 
-        String [] colors = {"Black", "WHite", "Silver", "Gold", "PInk"};
+        String [] colors = {"Black", "White", "Silver", "Gold", "PInk"};
         if(Arrays.asList(colors).contains(color)){
             this.color = color;
         }else{
