@@ -7,6 +7,8 @@ import day30_inheritance.phone.Nokia;
 import day30_inheritance.phone.Phone;
 import day33_abstraction.employee.Developer;
 import day33_abstraction.employee.Employee;
+import day35_polymorphism.transportationTask.Electric;
+import day35_polymorphism.transportationTask.Tesla;
 
 public class ReferenceTypeCasting {
 
@@ -62,7 +64,11 @@ public class ReferenceTypeCasting {
         employee.work();
         System.out.println(((Developer)employee).getProgrammingLanguage());
 
+        Electric electric = new Tesla("Tesla", "Model y", "Blue", 2020,55000);
+        electric.charge();
 
+        ((Tesla) electric).autoPark();
+        ((Tesla)electric).selfDrive();
 
     }
 }
