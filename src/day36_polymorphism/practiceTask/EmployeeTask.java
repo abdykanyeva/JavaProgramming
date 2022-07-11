@@ -4,6 +4,7 @@ import day33_abstraction.employee.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class EmployeeTask {
@@ -38,7 +39,7 @@ public class EmployeeTask {
 
         for (Employee employee : employees) {
             if(employee instanceof Developer || employee instanceof Tester){
-                scrumMembers.addAll(Arrays.asList(employee));
+                scrumMembers.add(employee);
             }
         }
         System.out.println(scrumMembers);
@@ -57,20 +58,13 @@ public class EmployeeTask {
         }
         System.out.println(developers);
 
-        double maxDevSalary = employees[0].getSalary();
-        double maxTesterSalary = employees[0].getSalary();
+        ArrayList<Double> salaryList = new ArrayList<>();
 
-        for(Employee each: employees){
-            if(each instanceof Developer && each.getSalary() > maxDevSalary){
-                maxDevSalary = each.getSalary();
-            }
-            if(each instanceof Tester && each.getSalary() > maxTesterSalary){
-                maxTesterSalary = each.getSalary();
-            }
+
+        for (Employee employee : employees) {
+            salaryList.add(employee.getSalary());
         }
-        System.out.println(maxDevSalary);
-        System.out.println(maxTesterSalary);
-
-
+        System.out.println(Collections.max(salaryList));
+        System.out.println(Collections.min(salaryList));
     }
 }
