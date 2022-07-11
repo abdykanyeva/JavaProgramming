@@ -4,7 +4,6 @@ import day33_abstraction.employee.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class EmployeeTask {
@@ -46,25 +45,36 @@ public class EmployeeTask {
 
         for (Employee employee : employees) {
             if(employee instanceof Tester){
-                testers.addAll(Arrays.asList( (Tester)employee) ); // Employee employees = new Tester;
+                testers.add(( (Tester)employee) ); // Employee employees = new Tester;
             }                                                      // (Tester) employees
         }
         System.out.println(testers);
 
         for (Employee employee : employees) {
             if(employee instanceof Developer){
-                developers.addAll(Arrays.asList(  (Developer) employee));
+                developers.add( ((Developer) employee));
             }
         }
         System.out.println(developers);
 
-        ArrayList<Double> salaryList = new ArrayList<>();
+        double maxDevSalary = employees[0].getSalary();
+        double maxTesterSalary = employees[0].getSalary();
 
+        for(Developer each: developers){
+            if( each.getSalary() > maxDevSalary){
+                maxDevSalary = each.getSalary();
+            }
 
-        for (Employee employee : employees) {
-            salaryList.add(employee.getSalary());
         }
-        System.out.println(Collections.max(salaryList));
-        System.out.println(Collections.min(salaryList));
+
+        for(Tester each: testers){
+            if(each.getSalary() > maxTesterSalary){
+                maxTesterSalary = each.getSalary();
+            }
+        }
+        System.out.println(maxDevSalary);
+        System.out.println(maxTesterSalary);
+
+
     }
 }
