@@ -35,8 +35,8 @@ public class ThrowsKeyword2 {
         new FileInputStream(" ");
 
         Thread.sleep(5000);
+
+
     }
-
-
 
 }
