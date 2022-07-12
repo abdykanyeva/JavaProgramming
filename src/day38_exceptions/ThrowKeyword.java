@@ -33,6 +33,14 @@ public class ThrowKeyword {
 
 
        // throw new FileNotFoundException("");
+
+        //RuntimeException exception = new RuntimeException();
+
+        //throw  exception;
+
+       // throw new Person("jIMMY", 45, 'M'); // does not have IS-A relationship with "Throwable" class
+
+
     }
 
 }
