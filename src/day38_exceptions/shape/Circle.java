@@ -1,23 +1,29 @@
 package day38_exceptions.shape;
 
-public class Circle {
+public class Circle extends Shape{
 
     private double radius;
 
 
+    public Circle(String name, double radius) {
+        super(name);
+        setRadius(radius);
+    }
+
     public double getRadius() {
-       return radius;
+        return radius;
     }
 
     public void setRadius(double radius) {
         if(radius <= 0){
-            throw new InvalidShapeException("Radius of the circle can not be negative or zero: " + radius);
+            throw new InvalidShapeExceptions("Radius can not be set to zero: "+ radius);
         }
         this.radius = radius;
     }
 
-    public Circle(double radius) {
-        setRadius(radius);
-
+    @Override
+    public double area() {
+        return radius * radius * Math.PI;
     }
+
 }
